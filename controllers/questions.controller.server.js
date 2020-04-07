@@ -1,10 +1,5 @@
 const questionsService = require('../services/questions.service.server')
 module.exports = function (app) {
-    app.get("/api/quizzes/:qzid/questions", (req, res) =>
-        res.json(questionsService
-            .findQuestionsForQuiz(req.params['qzid']))
-    )
-
     app.get('/api/quizzes/:qid/questions', (req, res) =>
         questionsService.findQuestionsForQuiz(req.params['qid'])
             .then(questions => res.json(questions)))
@@ -14,6 +9,5 @@ module.exports = function (app) {
     app.get('/api/questions/:qid', (req, res) =>
         questionsService.findQuestionById(req.params['qid'])
             .then(question => res.json(question)))
-
 
 }
