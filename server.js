@@ -7,7 +7,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+// mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+mongoose.connect('mongodb+srv://cs5610_xiaohai:cs5610_xiaohai@cluster0-7jjzs.mongodb.net/whiteboard-cs5610-sp20',
     {useNewUrlParser: true, useUnifiedTopology: true } )
 
 app.use(function(req, res, next) {
