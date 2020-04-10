@@ -4,7 +4,7 @@
   "description": "A Simple Node Server Application",
   "main": "index.js",
   "scripts": {
-    "start": "node server_hello.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
