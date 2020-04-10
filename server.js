@@ -28,5 +28,6 @@ require('./controllers/quiz-attempts.controller.server')(app)
 require('./controllers/users.controller.server')(app)
 
 app.get('/hello', (req, res) => res.send('hello world!'))
+app.get('/', (req, res) => res.send('Welcome to wbdv-sp20-xiaohai-server-node'))
 
 app.listen(3000)
